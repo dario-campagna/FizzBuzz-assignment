@@ -1,4 +1,4 @@
-package dssc.assignment.fizzbuzz;
+package sdm.assignment.fizzbuzz;
 
 public class FizzBuzzTest {
     
