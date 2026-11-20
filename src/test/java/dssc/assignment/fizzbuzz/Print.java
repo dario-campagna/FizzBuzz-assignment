@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.PrintStream;
 import java.util.stream.IntStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Print {
 
@@ -19,7 +19,7 @@ public class Print {
 
         fizzBuzz.print(IntStream.range(1, 16));
 
-        assertEquals(FIZZBUZZES_1_TO_15, spyDisplay.text);
+        assertThat(spyDisplay.text).isEqualTo(FIZZBUZZES_1_TO_15);
     }
 
     private static class SpyDisplay implements Display {
