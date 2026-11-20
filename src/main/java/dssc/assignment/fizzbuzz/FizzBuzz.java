@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class FizzBuzz {
 
     public static void main(String... args) {
-
+        
     }
 
     public String convert(int number) {
