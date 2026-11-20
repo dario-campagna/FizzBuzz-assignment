@@ -4,7 +4,7 @@ import net.jqwik.api.*;
 
 public class Properties {
 
-    private final FizzBuzz fizzBuzz = new FizzBuzz();
+    private final FizzBuzz fizzBuzz = new FizzBuzz(null);
 
     @Property
     boolean multiples_of_three_start_with_Fizz(@ForAll("multipleOfThree") int number) {

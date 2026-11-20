@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Convert {
 
-    private final FizzBuzz fizzBuzz = new FizzBuzz();
+    private final FizzBuzz fizzBuzz = new FizzBuzz(null);
 
     @ParameterizedTest
     @CsvSource({"1, 1", "2, 2", "41, 41"})

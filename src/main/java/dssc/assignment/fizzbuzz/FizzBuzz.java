@@ -5,9 +5,15 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class FizzBuzz {
+    
+    private final Display display;
+
+    public FizzBuzz(Display display) {
+        this.display = display;
+    }
 
     public static void main(String... args) {
-        
+        new FizzBuzz((System.out::println)).print(IntStream.range(1, 101));
     }
 
     public String convert(int number) {
@@ -22,8 +28,8 @@ public class FizzBuzz {
         }
     }
 
-    public void print() {
-        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
-        System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
+    public void print(IntStream range) {
+        Stream<String> fizzBuzzes = range.mapToObj(this::convert);
+        display.show(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 }
